@@ -1,0 +1,38 @@
+# .github/workflows/main.yml
+name: Build, Lint and Format Check
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+
+jobs:
+  build_and_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a current LTS version
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci # Use ci for faster, deterministic installs in CI
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Build extension
+        run: npm run build
+
+    # Add test step here in future milestones
+    # - name: Run tests
+    #   run: npm test
