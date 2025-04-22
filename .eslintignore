@@ -1,0 +1,4 @@
+dist/
+node_modules/
+vite.config.ts # Often uses different module patterns
+*.js # Ignore JS files if source is pure TS, adjust if needed

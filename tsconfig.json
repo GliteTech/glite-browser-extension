@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Target modern JS features
+    "module": "ESNext", // Use ES modules
+    "moduleResolution": "node", // Or "bundler" for modern resolution
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", // Specify output directory (Vite might override this)
+    "rootDir": "./src", // Specify root directory of source files
+    "noEmit": true, // Let Vite handle emission, TS checks types only
+    "resolveJsonModule": true, // Allow importing JSON files
+    "lib": ["ESNext", "DOM", "WebWorker"], // Include necessary libraries
+    "types": ["chrome", "node"] // Include type definitions for chrome APIs and Node.js (for tooling)
+  },
+  "include": ["src/**/*", "vite.config.ts"], // Files to include in compilation
+  "exclude": ["node_modules", "dist"] // Files/dirs to exclude
+}

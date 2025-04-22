@@ -1,4 +1,5 @@
 # Changelog
+
 All notable changes to this project are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com) and the
 project adheres to Semantic Versioning.
@@ -6,6 +7,7 @@ project adheres to Semantic Versioning.
 ## [2.0.0] – 2025‑04‑21
 
 ### Added
+
 - **Table of Contents**: Added a new table of contents for easier navigation.
 - **User‑facing UI**: Toolbar icon & popup, context‑menu commands,
   highlight‑mode tooltips, full settings page.
@@ -41,6 +43,7 @@ project adheres to Semantic Versioning.
 - **Milestones**: New section (Section 16) outlining a phased development plan.
 
 ### Changed
+
 - Expanded **User Stories** from 2 → 4 (adds viewport & privacy scenarios).
 - Clarified **long‑text threshold** (≥ 30 words) and explicit node
   exclusions (navbars, sidebars, etc.).
@@ -62,13 +65,16 @@ project adheres to Semantic Versioning.
 - Document retitled **"Glite Browser Extension Specification."**
 
 ### Fixed
+
 - Corrected typos (e.g., "Dont'" → "Don't"), unified term "Highlight Mode,"
   and standardised CamelCase service names.
 
 ### Removed
+
 - Redundant paragraphs duplicated across sections; folded legacy "event
   listener" warnings into main principles.
 
 ### Security
+
 - Explicit requirement to sanitise any LLM‑derived HTML with **DOMPurify**
   before DOM insertion.
